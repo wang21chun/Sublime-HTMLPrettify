@@ -17,6 +17,7 @@ The shorter way of doing this is:
 ### Through [Sublime Package Manager](http://wbond.net/sublime_packages/package_control)
 
 * `Ctrl+Shift+P` or `Cmd+Shift+P` in Linux/Windows/OS X
+* `Ctrl+Shift+U` or `Cmd+Shift+U` in Linux/Windows/OS X 格式化VUE组件
 * type `install`, select `Package Control: Install Package`
 * type `prettify`, select `HTML-CSS-JS Prettify`
 
