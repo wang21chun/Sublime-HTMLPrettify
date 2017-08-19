@@ -1,6 +1,9 @@
 [{
   "caption": "HTMLPrettify",
   "command": "htmlprettify"
+},{
+  "caption": "VuePrettify",
+  "command": "vueprettify"
 }, {
   "caption": "HTMLPrettify: Set Prettify Preferences",
   "command": "htmlprettify_set_prettify_prefs"

@@ -11,8 +11,16 @@ sys.path.insert(0, dirname(__file__))
 from src.py.commands import *
 from src.py.event_listeners import *
 from src.py.main import *
+from src.py.vue import *
 
 
 class HtmlprettifyCommand(TextCommand):
+
     def run(self, edit):
         main(self.view, edit)
+
+
+class VueprettifyCommand(TextCommand):
+
+    def run(self, edit):
+        vue(self.view, edit)

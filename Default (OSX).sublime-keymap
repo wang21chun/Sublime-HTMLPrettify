@@ -1,6 +1,9 @@
 [{
   "keys": ["super+shift+h"],
   "command": "htmlprettify"
+},{
+  "keys": ["super+shift+u"],
+  "command": "vueprettify"
 }, {
   "keys": ["super+alt+h", "p"],
   "command": "htmlprettify_set_prettify_prefs"

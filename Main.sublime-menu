@@ -8,6 +8,11 @@
       "command": "htmlprettify"
     }, {
       "caption": "-"
+    },{
+      "caption": "Prettify Vue Code",
+      "command": "vueprettify"
+    }, {
+      "caption": "-"
     }, {
       "caption": "Prettify Preferences - Default",
       "command": "htmlprettify_set_prettify_prefs"
