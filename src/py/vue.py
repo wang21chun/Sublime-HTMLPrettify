@@ -18,25 +18,37 @@ from .utils.script_utils import prettify_verbose
 
 
 def vue(view, edit):
+
+    TEMPLATE_PATTERN_START = '<template.*?>'
+    TEMPLATE_PATTERN_END = '</template>'
+
     template_from_poin = view.find(
-        '<template.*>', 0, sublime.IGNORECASE).end()
+        TEMPLATE_PATTERN_START, 0, sublime.IGNORECASE).end()
     template_end_poin = view.find_all(
-        '</template>', sublime.IGNORECASE)[-1].begin()
+        TEMPLATE_PATTERN_END, sublime.IGNORECASE)[-1].begin()
     template_content_region = sublime.Region(
         template_from_poin, template_end_poin)
     template_to_prettify = view.substr(template_content_region)
     prettify(view, edit, '.html', template_to_prettify,
              template_content_region)
 
-    script_from_poin = view.find('<script.*>', 0, sublime.IGNORECASE).end()
-    script_end_poin = view.find('</script>', 0, sublime.IGNORECASE).begin()
+    SCRIPT_PATTERN_START = '<script.*?>'
+    SCRIPT_PATTERN_END = '</script>'
+    script_from_poin = view.find(
+        SCRIPT_PATTERN_START, 0, sublime.IGNORECASE).end()
+    script_end_poin = view.find(
+        SCRIPT_PATTERN_END, 0, sublime.IGNORECASE).begin()
     script_content_region = sublime.Region(
         script_from_poin, script_end_poin)
     script_to_prettify = view.substr(script_content_region)
     prettify(view, edit, '.js', script_to_prettify, script_content_region)
 
-    style_from_poin = view.find('<style.*>', 0, sublime.IGNORECASE).end()
-    style_end_poin = view.find('</style>', 0, sublime.IGNORECASE).begin()
+    STYLE_PATTERN_START = '<style.*?>'
+    STYLE_PATTERN_END = '</style>'
+    style_from_poin = view.find(
+        STYLE_PATTERN_START, 0, sublime.IGNORECASE).end()
+    style_end_poin = view.find(
+        STYLE_PATTERN_END, 0, sublime.IGNORECASE).begin()
     style_content_region = sublime.Region(
         style_from_poin, style_end_poin)
     style_to_prettify = view.substr(style_content_region)
